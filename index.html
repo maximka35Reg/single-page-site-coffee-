@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Каталог "Кофейная карта"</title>
+
+    <link rel="icon" type="image/x-icon" href="img/загруженное.ico">
+
+    <!-- Подключение стилей -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!-- Шапка -->
+    <header>
+        <div>
+            <h1>"Кофейная карта"</h1>
+            <p>От зерна до чашки: путеводитель по миру кофе</p>
+            <a class="link-map" href="#coffee-map">Изучить карту</a>
+        </div>
+    </header>
+    <main>
+        <!-- Секция для поиска по каталогу -->
+        <section class="search-filter">
+            <h2>Какой кофе ищешь?</h2>  
+
+            <input type="text" id="search" placeholder="Поиск по каталогу">
+
+            <div class="filters">
+                <div>
+                    <h3>По способу приготовления</h3>
+                    <div class="filter-container">
+                        <div class="filter" data-filter-type="way" data-filter-value="Эспрессо">Эспрессо</div>
+                        <div class="filter" data-filter-type="way" data-filter-value="Турка">Турка</div>
+                        <div class="filter" data-filter-type="way" data-filter-value="Френч-пресс">Френч-пресс</div>
+                        <div class="filter" data-filter-type="way" data-filter-value="Кофемашина">Кофемашина</div>
+                    </div>
+                </div>
+
+                <div>
+                    <h3>По крепости</h3>
+                    <div class="filter-container">
+                        <div class="filter" data-filter-type="strength" data-filter-value="Слабый">Слабый</div>
+                        <div class="filter" data-filter-type="strength" data-filter-value="Средний">Средний</div>
+                        <div class="filter" data-filter-type="strength" data-filter-value="Крепкий">Крепкий</div>
+                    </div>
+                </div>
+
+                <div>
+                    <h3>По стране происхождения</h3>
+                    <div class="filter-container">
+                        <div class="filter" data-filter-type="country" data-filter-value="Италия">Италия</div>
+                        <div class="filter" data-filter-type="country" data-filter-value="Турция">Турция</div>
+                        <div class="filter" data-filter-type="country" data-filter-value="Франция">Франция</div>
+                        <div class="filter" data-filter-type="country" data-filter-value="Россия">Россия</div>
+                    </div>
+                </div>
+            </div>
+            
+            <div>
+                <button id="reset">Сбросить фильтры</button>
+            </div>
+        </section>
+
+        <!-- Каталог карточек с видами кофе -->
+        <section class="catalog">
+                <div class="card" data-way="Эспрессо" data-strength="Крепкий" data-country="Италия">
+                    <div><img class="img" src="img/coffee-types/espresso.jpg"></div>
+                    <h3 class="name">Эспрессо</h3>
+                    <p class="descr">Насыщенный концентрированный кофе с плотной пенкой</p>
+                    <h3 class="strength">Крепость: Крепкий</h3>
+                    <h3 class="way">Способ: Эспрессо</h3>
+                    <h3 class="country">Страна: Италия</h3>
+                </div>
+                <div class="card" data-way="Кофемашина" data-strength="Слабый" data-country="Италия">
+                    <div><img class="img" src="img/coffee-types/latte.jpg"></div>
+                    <h3 class="name">Латте</h3>
+                    <p class="descr">Мягкий кофе с большим количеством молока</p>
+                    <h3 class="strength">Крепость: Слабый</h3>
+                    <h3 class="way">Способ: Кофемашина</h3>
+                    <h3 class="country">Страна: Италия</h3>
+                </div>
+                <div class="card" data-way="Кофемашина" data-strength="Средний" data-country="Италия">
+                    <div><img class="img" src="img/coffee-types/capuchino.jpg"></div>
+                    <h3 class="name">Капучино</h3>
+                    <p class="descr">Кофе с плотной молочной пенкой</p>
+                    <h3 class="strength">Крепость: Средний</h3>
+                    <h3 class="way">Способ: Кофемашина</h3>
+                    <h3 class="country">Страна: Италия</h3>
+                </div>
+                <div class="card" data-way="Эспрессо" data-strength="Средний" data-country="Италия">
+                    <div><img class="img" src="img/coffee-types/americano.jpg"></div>
+                    <h3 class="name">Американо</h3>
+                    <p class="descr">Эспрессо, разбавленный горячей водой</p>
+                    <h3 class="strength">Крепость: Средний</h3>
+                    <h3 class="way">Способ: Эспрессо</h3>
+                    <h3 class="country">Страна: Италия</h3>
+                </div>
+                <div class="card" data-way="Кофемашина" data-strength="Средний" data-country="Италия">
+                    <div><img class="img" src="img/coffee-types/mokachino.jpg"></div>
+                    <h3 class="name">Мокачино</h3>
+                    <p class="descr">Капучино с добавлением шоколада</p>
+                    <h3 class="strength">Крепость: Средний</h3>
+                    <h3 class="way">Способ: Кофемашина</h3>
+                    <h3 class="country">Страна: Италия</h3>
+                </div>
+                <div class="card" data-way="Кофемашина" data-strength="Средний" data-country="Россия">
+                    <div><img class="img" src="img/coffee-types/raf.jpg"></div>
+                    <h3 class="name">Раф</h3>
+                    <p class="descr">Кофе со сливками и ванильным сахаром</p>
+                    <h3 class="strength">Крепость: Средний</h3>
+                    <h3 class="way">Способ: Кофемашина</h3>
+                    <h3 class="country">Страна: Россия</h3>
+                </div>
+                <div class="card" data-way="Турка" data-strength="Крепкий" data-country="Турция">
+                    <div><img class="img" src="img/coffee-types/po-turezky.jpg"></div>
+                    <h3 class="name">Кофе по-турецки</h3>
+                    <p class="descr">Густой кофе, сваренный в турке с пряностями</p>
+                    <h3 class="strength">Крепость: Крепкий</h3>
+                    <h3 class="way">Способ: Турка</h3>
+                    <h3 class="country">Страна: Турция</h3>
+                </div>
+                <div class="card" data-way="Кофемашина" data-strength="Слабый" data-country="Франция">
+                    <div><img class="img" src="img/coffee-types/glyase.jpg"></div>
+                    <h3 class="name">Гляссе</h3>
+                    <p class="descr">Холодный кофе с шариком мороженого</p>
+                    <h3 class="strength">Крепость: Слабый</h3>
+                    <h3 class="way">Способ: Кофемашина</h3>
+                    <h3 class="country">Страна: Франция</h3>
+                </div> 
+        </section>
+
+        <!-- Блок для безрезультатного поиска -->
+        <div class="no-results">
+            <p>Ничего не найдено</p>
+        </div>
+
+        <!-- Оверлей для модального окна -->
+        <div class="modal-overlay"></div>
+
+        <!-- Модальное окно для видов кофе -->
+        <div class="modal-window-types">
+            <div class="modalPictureContainer"><img class="modalPicture" src="" /></div>
+            <div class="modal-info">
+                <div class="modalTitle"></div>
+                <div class="modalDesc"></div>
+                <div class="modalStrength"></div>
+                <div class="modalWay"></div>
+                <div class="modalCountry"></div>
+            </div>
+        </div>
+
+
+        <!-- Блок карты с отметками стран-производителей кофе -->
+        <section id="coffee-map" class="interactive-map">
+            <h2>Где растёт кофе?</h2>
+            <div>
+                <img src="img/world-map.png" class="map">
+                <span class="point" style="left: 53%; top: 58.5%;" id="ephiopia"
+                data-img="img/country-flags/Flag_of_Ethiopia.svg.png"
+                data-country="Эфиопия" data-info="Родина кофе. Эфиопская арабика славится своими сложными фруктово-цветочными букетами."
+                ></span>
+                
+                <span 
+                 data-img="img/country-flags/2020-09-12_01-15-02_2020-09-12_01-15-21.png"
+                data-country="Вьетнам" data-info="Мировой лидер по производству робусты. Из него делают знаменитый вьетнамский кофе со сгущенкой."
+                class="point" style="left: 71.3%; top: 59%;" id="vietnam"></span>
+                
+                <span 
+                 data-img="img/country-flags/a9b2cf382e34f82cbfe4ac5005660b9e.png"
+                data-country="Бразилия" data-info="Крупнейший производитель кофе в мире. Дает мягкий, сбалансированный вкус с нотками шоколада и орехов."
+                class="point" style="left: 30.5%; top: 66.5%;" id="brazil"></span>
+                
+                <span 
+                 data-img="img/country-flags/Flag_of_Mexico.svg.png"
+                data-country="Мексика" data-info="Легкий и ароматный кофе с классическим вкусом и нежной кислинкой. Часто используется для гурманских блендов."
+                class="point" style="left: 20.5%; top: 50.8%;" id="mexica"></span>
+                
+                <span 
+                data-img="img/country-flags/6nhy8n72di0bmhwjl5d3o4mryk9ffu10.png"
+                data-country="Индия" data-info="Кофе здесь часто выращивают вместе с пряностями, что слегка отражается на вкусе готового напитка."
+                class="point" style="left: 65%; top: 50%;" id="india"></span>
+                
+                <span 
+                data-img="img/country-flags/60d459be19d0e9754f311295f8e7b587.png"
+                data-country="Индонезия" data-info="Знаменита уникальным сортом Копи Лювак и очень низкой кислинкой, которая ценится в темной обжарке."
+                class="point" style="left: 74.8%; top: 67%;" id="indonezia"></span>
+                
+                <span
+                data-img="img/country-flags/Flag_of_Guatemala.svg.png"
+                data-country="Гватемала" data-info="Здесь ценятся высокогорные сорта с шоколадными нотками и цветочным ароматом."
+                class="point" style="left: 23%; top: 53.5%;" id="gvatemala"></span>
+                
+                <span
+                data-img="img/country-flags/Flag_of_Colombia.svg.png"
+                data-country="Колумбия" data-info="Эталон мягкого, чистого и сбалансированного вкуса. Знаменита своим мягким ароматом и легкой кислинкой."
+                class="point" style="left: 25.8%; top: 61.5%;" id="columbia"></span>
+                
+                <span
+                data-img="img/country-flags/Flag_of_Uganda.svg.png"
+                data-country="Уганда" data-info="Быстро набирающий популярность производитель. Производит отличную робусту, а также арабику с фруктовыми нотками."
+                class="point" style="left: 52.5%; top: 61.8%;" id="uganda"></span>
+                
+                <span
+                data-img="img/country-flags/Flag_of_Tanzania.svg.png"
+                data-country="Танзания" data-info="Кофейные зерна здесь часто сортируют по размеру, и лучшие из них по вкусу не уступают прославленным кенийским."
+                class="point" style="left: 53.5%; top: 68.5%;" id="tanzania"></span>
+                
+                <span
+                data-img="img/country-flags/Flag_of_Egypt_without_eagle.svg.png"
+                data-country="Йемен" data-info="Кофе из Йемена — один из самых уникальных в мире: пряный, плотный, с нотками шоколада и сухофруктов."
+                class="point" style="left: 56.5%; top: 54%;" id="iemen"></span>
+                
+                <span
+                data-img="img/country-flags/Flag_of_Peru_(state).svg.png"
+                data-country="Перу" data-info="Страна органического кофе. Здесь выращивают отличную высокогорную арабику с мягким вкусом и цветочным ароматом."
+                class="point" style="left: 25.2%; top: 67%;" id="pery"></span>
+            </div>    
+        </section>      
+ 
+        <!-- Блок подсказки с информацией о стране  -->
+        <div class="point-window">
+            <div class="point-window-img-cont"><img class="point-img" src=""></div>
+            <div class="point-window-country"></div>
+            <div class="point-window-info"></div>
+        </div>  
+
+        <!-- Блок с карточками способов приготовления напитка -->
+        <section class="great-cup">
+            <h2>Как заварить идеальную чашку</h2>
+
+            <div class="types">
+                <div class="type" data-title="Эспрессо" 
+                data-desc="Горячая вода под высоким давлением (9 бар) проходит через тонко молотый кофе всего за 20-30 секунд. Результат — концентрированный напиток с плотной золотистой пенкой (крема) и насыщенным вкусом. Это основа для большинства популярных кофейных напитков." 
+                data-img="img/coffee-ways/0e080ac103ec28b4ddabac28fa9c4eb7.jpg"
+                data-link="https://vkvideo.ru/video-90183510_456239329">
+                    <div><img src="img/icons/espresso-machine.svg"></div>
+                    <h3>Эспрессо</h3>
+                </div>
+                <div class="type" data-title="Турка" 
+                data-desc="Самый древний способ приготовления. Свежемолотый кофе сверхтонкого помола медленно нагревается в турке (лучше медной) с сахаром и специями. Важно снять с огня до закипания, чтобы сохранить нежную пенку — главное богатство этого способа. Напиток получается густым, пряным и очень насыщенным." 
+                data-img="img/coffee-ways/kofe_2_1744891537_lh_big_x2.jpg"
+                data-link="https://vkvideo.ru/video-38912380_456240653">
+                    <div><img src="img/icons/moka-pot.svg"></div>
+                    <h3>Турка</h3>
+                </div>
+                <div class="type" data-title="Френч-пресс" 
+                data-desc="Всё очень просто: кофе засыпают в стеклянную колбу, заливают горячей водой и оставляют на 4 минуты. Потом опускают поршень с сеточкой — она отделяет гущу, и можно наливать. Так как здесь не используют бумажный фильтр, в чашку попадают все натуральные масла из кофейных зёрен. Из-за этого вкус чувствуется ярче и насыщеннее, чем у кофе из бумажной воронки. Способ лёгкий и даёт плотный, богатый вкус." 
+                data-img="img/coffee-ways/kak-zaverit-svezheobzharenniy-kofe-molotiy-v-french-presse-1.jpg"
+                data-link="https://vkvideo.ru/video-90183510_456239335"> 
+                    <div><img src="img/icons/french-press (1).svg"></div>
+                    <h3>Френч-пресс</h3>
+                </div>
+                <div class="type" data-title="Воронка (пуровер)" 
+                data-desc="Способ для настоящих ценителей и перфекционистов. Вода заливается в воронку с бумажным фильтром по спирали. Бумага задерживает масла и взвеси, давая на выходе кристально чистый напиток, где слышны малейшие оттенки вкуса — от ягодных до цветочных. Требует навыка, контроля температуры и времени, но вознаграждает самым «прозрачным» и деликатным кофе."
+                data-img="img/coffee-ways/image8.jpg"
+                data-link="https://vkvideo.ru/video-38517785_456239025">
+                    <div><img src="img/icons/kofevarka_zb4vglfgqs2l.svg"></div>
+                    <h3>Воронка (пуровер)</h3>
+                </div>
+                <div class="type" data-title="Кофемашина"
+                data-desc="Современная классика. Устройство берет на себя контроль давления, температуры и пролива. В рожковых машинах вы управляете процессом (помол, темперовка), в автоматических — просто нажимаете кнопку. Идеально для быстрого и стабильного результата: от эспрессо до капучино с помощью автоматического вспенивания молока."
+                data-img="img/coffee-ways/s-l1600.jpg"
+                data-link="https://vkvideo.ru/video-108462309_456239083">
+                    <div><img src="img/icons/kofevarka_6u5v0o7gnvul.svg"></div>
+                    <h3>Кофемашина</h3>
+                </div>
+            </div>
+        </section>
+
+        <!-- Модальное окно ознакомления со способом приготовления -->
+        <div class="modal-window-way">
+            <div class="modalPictureContainer"><img class="modalWayPicture" src="" /></div>
+            <div class="modalWayTitle"></div>
+            <div class="modalWayDesc"></div>
+            <a href="" class="modalWayLink">Смотреть</a>
+        </div>
+    </main>
+
+    <!-- Подвал с контактной информацией -->
+    <footer>
+        <div class="footer-container">
+        <a href="#" class="brand">Кофейная карта</a>
+        <div class="contacts">
+            <h3>Мы в соц. сетях:</h3>
+            <div><a href="https://web.telegram.org/">
+                <svg fill="currentColor" width="800px" height="800px" viewBox="0 0 32 32" version="1.1" xmlns="http://www.w3.org/2000/svg">
+                <path d="M22.122 10.040c0.006-0 0.014-0 0.022-0 0.209 0 0.403 0.065 0.562 0.177l-0.003-0.002c0.116 0.101 0.194 0.243 0.213 0.403l0 0.003c0.020 0.122 0.031 0.262 0.031 0.405 0 0.065-0.002 0.129-0.007 0.193l0-0.009c-0.225 2.369-1.201 8.114-1.697 10.766-0.21 1.123-0.623 1.499-1.023 1.535-0.869 0.081-1.529-0.574-2.371-1.126-1.318-0.865-2.063-1.403-3.342-2.246-1.479-0.973-0.52-1.51 0.322-2.384 0.221-0.23 4.052-3.715 4.127-4.031 0.004-0.019 0.006-0.040 0.006-0.062 0-0.078-0.029-0.149-0.076-0.203l0 0c-0.052-0.034-0.117-0.053-0.185-0.053-0.045 0-0.088 0.009-0.128 0.024l0.002-0.001q-0.198 0.045-6.316 4.174c-0.445 0.351-1.007 0.573-1.619 0.599l-0.006 0c-0.867-0.105-1.654-0.298-2.401-0.573l0.074 0.024c-0.938-0.306-1.683-0.467-1.619-0.985q0.051-0.404 1.114-0.827 6.548-2.853 8.733-3.761c1.607-0.853 3.47-1.555 5.429-2.010l0.157-0.031zM15.93 1.025c-8.302 0.020-15.025 6.755-15.025 15.060 0 8.317 6.742 15.060 15.060 15.060s15.060-6.742 15.060-15.060c0-8.305-6.723-15.040-15.023-15.060h-0.002q-0.035-0-0.070 0z"></path>
+                </svg>
+            </a></div>
+            <div><a href="https://vk.com/">
+                <svg width="800px" height="800px" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                <path fill-rule="evenodd" clip-rule="evenodd" d="M3.4 3.4C2 4.81333 2 7.07333 2 11.6V12.4C2 16.92 2 19.18 3.4 20.6C4.81333 22 7.07333 22 11.6 22H12.4C16.92 22 19.18 22 20.6 20.6C22 19.1867 22 16.9267 22 12.4V11.6C22 7.08 22 4.82 20.6 3.4C19.1867 2 16.9267 2 12.4 2H11.6C7.08 2 4.82 2 3.4 3.4ZM5.37333 8.08667C5.48 13.2867 8.08 16.4067 12.64 16.4067H12.9067V13.4333C14.58 13.6 15.8467 14.8267 16.3533 16.4067H18.72C18.4773 15.5089 18.0469 14.6727 17.4574 13.9533C16.8679 13.234 16.1326 12.6478 15.3 12.2333C16.0461 11.779 16.6905 11.1756 17.1929 10.461C17.6953 9.7464 18.045 8.93585 18.22 8.08H16.0733C15.6067 9.73334 14.22 11.2333 12.9067 11.3733V8.08667H10.7533V13.8467C9.42 13.5133 7.74 11.9 7.66666 8.08667H5.37333Z" />
+                </svg>
+            </a></div>
+        </div>
+        </div>
+        
+        <div class="copyright">© ООО "Кофейная карта" 2026. Все права защищены</div>
+    </footer>
+
+    <!-- Подключение скрипта -->
+    <script src="js/index.js"></script>
+</body>
+</html>
