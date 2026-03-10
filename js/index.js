@@ -16,7 +16,7 @@ function filter() {
   // Счётчик найденных карточек
   let count = 0;
 
-  const cards = document.querySelectorAll('.card').forEach(card => {
+  document.querySelectorAll('.card').forEach(card => {
     // Данные для сравнения с поисковой строкой
     const name = card.querySelector('.name').textContent.toLowerCase();
     const desc = card.querySelector('.descr').textContent.toLowerCase();
@@ -51,8 +51,8 @@ function filter() {
 search.addEventListener('input', filter);
 
 //Клик по кнопке фильтра
-filters.forEach(btn => {
-  btn.addEventListener('click', function() {
+filters.forEach(filter => {
+  filter.addEventListener('click', function() {
     filters.forEach(f => { f.classList.remove('active'); });
     this.classList.add('active');
     filter();
@@ -161,4 +161,3 @@ points.forEach(point => {
     win.style.display = 'none';
   });
 });
-

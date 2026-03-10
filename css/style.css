@@ -354,7 +354,6 @@ h2 {
     background-color: rgba(0, 0, 0, 0.7);
     filter: blur(2px);
     opacity: 0;
-    visibility: hidden;
     transition: all 0.3s ease;
     z-index: 10;
     pointer-events: none;
@@ -362,7 +361,6 @@ h2 {
 
 .modal-overlay.active, .modal-window-types.active, .modal-window-way.active {
     opacity: 1;
-    visibility: visible;
     pointer-events: all;
 }
 
@@ -436,7 +434,6 @@ h2 {
     position: fixed;
     left: 0;
     top: 0;
-    z-index: 50;
     width: auto;
     min-height: 100px;
     max-width: 300px;
