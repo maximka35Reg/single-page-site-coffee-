@@ -124,9 +124,7 @@ document.querySelectorAll('.type').forEach(type => {
 overlay.addEventListener('click', closeModal);
 
 document.addEventListener('keydown', function (event) {
-  if (event.key === 'Escape') {
-    closeModal();
-  }
+  if (event.key === 'Escape') closeModal();
 });
 
 function closeModal() {
@@ -152,7 +150,7 @@ points.forEach(point => {
     img.src = this.dataset.img;
         
     win.style.left = (e.clientX - 20) + 'px'; 
-    win.style.top = (e.clientY - 210) + 'px';
+    win.style.top = (e.clientY - 220) + 'px';
 
     win.style.display = 'flex';
   });
